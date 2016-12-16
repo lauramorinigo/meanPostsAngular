@@ -66,6 +66,8 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
       },
     ];
   $scope.alert = '';
+
+
   $scope.showListBottomSheet = function($event) {
     $scope.alert = '';
     $mdBottomSheet.show({
@@ -76,7 +78,7 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
       $scope.alert = clickedItem.name + ' es magique';
     });
   };
-  
+
   $scope.showAdd = function(ev) {
     $mdDialog.show({
       controller: DialogController,
@@ -98,7 +100,7 @@ app.controller('ListBottomSheetCtrl', function($scope, $mdBottomSheet) {
     { name: 'Copy', icon: 'copy' },
     { name: 'Print this page', icon: 'print' },
   ];
-  
+
   $scope.listItemClick = function($index) {
     var clickedItem = $scope.items[$index];
     $mdBottomSheet.hide(clickedItem);

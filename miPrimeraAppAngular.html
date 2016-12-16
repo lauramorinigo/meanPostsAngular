@@ -2,15 +2,15 @@
   <head>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
      <link rel="stylesheet" href="style.css">
-    
+
     <!-- Angular Material Dependencies -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-aria.min.js"></script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
-    
-    <script src="http://cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script> 
+
+    <script src="http://cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
     <script src="inicio.js"></script>
   </head>
   <body layout="row" ng-controller="AppCtrl">
@@ -72,6 +72,7 @@
             <ng-md-icon icon="more_vert"></ng-md-icon>
           </md-button>
         </div>
+
         <md-tabs md-stretch-tabs class="md-primary" md-selected="data.selectedIndex">
           <md-tab id="tab1" aria-controls="tab1-content">
             Inicio
@@ -83,16 +84,18 @@
       </md-toolbar>
       <md-toolbar class="md-hue-1" ng-show="showSearch">
         <div class="md-toolbar-tools">
-          <md-button ng-click="showSearch = !showSearch" aria-label="Back">
+         <md-button ng-click="showSearch = !showSearch" aria-label="Back">
             <ng-md-icon icon="arrow_back"></ng-md-icon>
           </md-button>
-          <h3 flex="10">
+         <h3 flex="10">
            Volver
           </h3>
+
           <md-input-container md-theme="input" flex>
             <label>&nbsp;</label>
             <input ng-model="search.who" placeholder="Inserte busqueda">
           </md-input-container>
+
           <md-button aria-label="Search" ng-click="showSearch = !showSearch">
             <ng-md-icon icon="search"></ng-md-icon>
           </md-button>
@@ -100,8 +103,9 @@
             <ng-md-icon icon="more_vert"></ng-md-icon>
           </md-button>
         </div>
-       
+
       </md-toolbar>
+
       <md-content flex md-scroll-y>
         <ui-view layout="column" layout-fill layout-padding>
           <div class="inset" hide-sm></div>
@@ -148,7 +152,7 @@
                    aria-labelledby="tab2"
                    ng-switch-when="1"
                    md-swipe-left="next()"
-                   md-swipe-right="previous()" 
+                   md-swipe-right="previous()"
                    layout="row" layout-align="center center">
                   <md-card flex-gt-sm="90" flex-gt-md="80">
                     <md-card-content>
@@ -180,12 +184,12 @@
                     </md-card-content>
                   </md-card>
               </div>
-              
+
           </ng-switch>
-          
+
         </ui-view>
       </md-content>
     </div>
- 
+
   </body>
 </html>
