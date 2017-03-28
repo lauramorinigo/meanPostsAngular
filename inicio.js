@@ -126,10 +126,6 @@ app.directive('userAvatar', function() {
   };
 });
 
-/*
-
-
-
 app.config(function($mdThemingProvider) {
   var customBlueMap = 		$mdThemingProvider.extendPalette('light-blue', {
     'contrastDefaultColor': 'light',
@@ -146,4 +142,3 @@ app.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('input', 'default')
         .primaryPalette('grey')
 });
-*/
